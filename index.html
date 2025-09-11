@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTR SPORT</title>
+</head>
+
+<body style="background-color: lavender; font-family: sans-serif;">
+
+    <table width="100%" style="background-color: black; color: white;" cellpadding="10">
+        <tr>
+            <td width="30%" style="text-align: center;">
+                <img src="../SA-Formulario/LogoCTR.png" height="80px" width="auto">
+            </td>
+            <td width="70%" style="text-align: center;">
+                <h1 style="margin: 0; font-size: 40px;">FORMULARIO DE SERVICIO</h1>
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <center>
+        <table cellpading="10" cellpading="0" width="70%"
+            style="background-color: white; border: 0; border-radius: 15px; box-shadow: 0 0 10px">
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h1>INGRESA TUS DATOS</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;"><strong><label for="name">Nombre Completo:</label></strong></td>
+                <td><input type="text" id="name" name="name" style="width:90%; padding:5px;"></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;"><strong><label for="email">Correo:</label></strong></td>
+                <td><input type="email" id="email" name="email" style="width:90%; padding:5px;"></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;"><strong><label for="naci">Fecha de nacimiento:</label></strong></td>
+                <td><input type="date" id="naci" name="naci" style="width:90%; padding:5px;"></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;"><strong><label for="num">Número de telefono:</label></strong></td>
+                <td><input type="tel" id="num" name="num" style="width:90%; padding:5px;" placeholder="+51 999 999 999">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;"><strong><label for="marca">Marca de auto:</label></strong></td>
+                <td>
+                    <select name="marca" id="marca" style="width: 93%; padding: 5px;">
+                        <option valvue="">Selecciona marca</option>
+                        <option value="ferrari">Ferrari</option>
+                        <option value="lamborghini">Lamborghini</option>
+                        <option value="porsche">Porsche</option>
+                        <option value="mclaren">McLaren</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;"><strong><label for="modelo">Modelo:</label></strong></td>
+                <td><input type="text" id="modelo" name="modelo" style="width: 90%; padding: 5px;"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="reset"
+                        style="background-color: gray; color: white; height:40px; width:100px; border:none; border-radius:8px; cursor:pointer;">Borrar</button>
+                    &nbsp;&nbsp;
+                    <button type="submit"
+                        style="background-color: red; color: white; height:40px; width:120px; border:none; border-radius:8px; cursor:pointer;">Cotizar
+                        ahora</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+    
+</body>
+</html>
