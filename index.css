@@ -6,18 +6,169 @@ body {
     padding: 0;
 }
 
+/* Header */
 header {
     background-color: #222;
     color: white;
-    padding: 20px;
+    padding: 15px 30px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header img {
-    height: 80px;
-    margin-bottom: 5px;
+    height: 70px;
 }
 
-/* Estilo del contenedor del formulario */
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e74c3c;
+}
+
+/* Galería */
+.gallery {
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item span {
+    font-weight: bold;
+    color: #222;
+}
+
+/* Hero Section */
+.hero {
+    background: url("fondo-supercar.jpg") no-repeat center center/cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 14px 35px;
+    background: #e74c3c;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #c0392b;
+}
+
+/* Beneficios */
+.benefits {
+    width: 90%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.benefit {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.benefit img {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.benefit h3 {
+    font-size: 20px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 16px;
+    color: #555;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+}
+
+/* Formulario */
 .form-container {
     background-color: white;
     width: 70%;
@@ -36,7 +187,6 @@ header img {
     font-weight: 600;
 }
 
-/* Estilo de los campos de entrada */
 label {
     font-size: 16px;
     color: #333;
@@ -64,7 +214,7 @@ select:focus {
     box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
 }
 
-/* Estilo de los botones */
+/* Botones */
 button {
     padding: 12px 30px;
     font-size: 18px;
@@ -89,12 +239,10 @@ button[type="reset"]:hover {
     background-color: #2c3e50;
 }
 
-/* Estilo de la acción del formulario */
 .form-actions {
     text-align: center;
 }
 
-/* Estilos adicionales para mejorar la experiencia */
 .form-container p {
     font-size: 14px;
     color: #666;
@@ -110,6 +258,144 @@ button[type="reset"]:hover {
     text-decoration: underline;
 }
 
+/* Testimonios */
+.testimonials {
+    width: 90%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.testimonial {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    font-size: 18px;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.testimonial span {
+    font-size: 14px;
+    color: #777;
+}
+
+/* FAQ */
+.faq {
+    width: 90%;
+    margin: 60px auto;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: background 0.3s;
+}
+
+.faq-item:hover {
+    background: #f9f9f9;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Marcas Destacadas */
+.brands {
+    width: 90%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.brands h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.brand-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.brand-item img {
+    max-width: 120px;
+    margin: auto;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.brand-item img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
     .form-container {
@@ -117,7 +403,15 @@ button[type="reset"]:hover {
         padding: 20px;
     }
 
-    header h1 {
-        font-size: 28px;
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
     }
 }
